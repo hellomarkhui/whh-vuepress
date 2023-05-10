@@ -11,39 +11,39 @@ module.exports = {
     lineNumbers: true // 代码块显示行号
   },
   themeConfig: {
-    sidebarDepth: 1, // e'b将同时提取markdown中h2 和 h3 标题，显示在侧边栏上。
+    logo: '/logo.png',
+    sidebarDepth: 2, // e'b将同时提取markdown中h2 和 h3 标题，显示在侧边栏上。
     lastUpdated: 'Last Updated', // 文档更新时间：每个文件git最后提交的时间
     nav: [
-      { text: '前端规范', link: '/guide/' },
+      { text: '规范', link: '/standard/' },
       { text: '前端积累', link: '/accumulate/' },
       { text: '前端算法', link: '/algorithm/' },
     ],
-    sidebar:{
-      '/guide/': [
-        '/guide/',
-      ],
-      // docs文件夹下面的accumulate文件夹 文档中md文件 书写的位置(命名随意)
-      '/accumulate/': [
-          '/accumulate/', // accumulate文件夹的README.md 不是下拉框形式
-          {
-            title: 'js相关的',
-            children: [
-              '/accumulate/JS/', // 以docs为根目录来查找文件 
-              // 上面地址查找的是：docs>accumulate>JS>test.md 文件
-              // 自动加.md 每个子选项的标题 是该md文件中的第一个h1/h2/h3标题
-            ]
-          }
-        ],
-        // docs文件夹下面的algorithm文件夹 这是第二组侧边栏 跟第一组侧边栏没关系
-        '/algorithm/': [
-          '/algorithm/', 
-          {
-            title: '第二组侧边栏下拉框的标题1',
-            children: [
-              '/algorithm/simple/test' 
-            ]
-          }
-        ]
+    sidebar: {
+      '/standard/': [
+        ['', '介绍'],
+        {
+          title: '编程规约',
+          collapsable: false,
+          children: [
+            ['code/', '介绍'],
+            'code/name',
+            'code/html',
+            'code/css',
+            'code/sass-less',
+            'code/javascript',
+          ]
+        },
+        {
+          title: 'Vue 项目规范',
+          collapsable: false,
+          children: [
+            'vue/code',
+            'vue/fold',
+          ]
+        },
+        'other/',
+      ]
     }
   }
 };
