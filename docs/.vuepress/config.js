@@ -1,6 +1,6 @@
 module.exports = {
-  title: '前端指导',
-  description: '前端开发积累，前端开发规范，代码规范等的整理。',
+  title: '前端开发',
+  description: '前端开发积累，前端开发规范，代码管理。',
   host: "localhost",
   // 注入到当前页面的 HTML <head> 中的标签
   head: [
@@ -15,13 +15,18 @@ module.exports = {
     sidebarDepth: 2, // e'b将同时提取markdown中h2 和 h3 标题，显示在侧边栏上。
     lastUpdated: 'Last Updated', // 文档更新时间：每个文件git最后提交的时间
     nav: [
-      { text: '规范', link: '/standard/' },
-      { text: '前端积累', link: '/accumulate/' },
-      { text: '前端算法', link: '/algorithm/' },
+      {
+        text: '开发规范',
+        items: [
+          { text: '编码规范', link: '/standard/' },
+          { text: '风格统一', link: '/format/' },
+        ]
+      },
+      { text: '代码管理', link: '/code/' },
     ],
     sidebar: {
       '/standard/': [
-        ['', '介绍'],
+        ['', '前言'],
         {
           title: '编程规约',
           collapsable: false,
@@ -43,7 +48,14 @@ module.exports = {
           ]
         },
         'other/',
-      ]
+      ],
+      '/code/': [
+        '',
+        'commit',
+      ],
+      '/format/': [
+        '',
+      ],
     }
   }
 };
