@@ -16,13 +16,11 @@ module.exports = {
     lastUpdated: 'Last Updated', // 文档更新时间：每个文件git最后提交的时间
     nav: [
       {
-        text: '开发规范',
-        items: [
-          { text: '编码规范', link: '/standard/' },
-          { text: '风格统一', link: '/format/' },
-        ]
+        text: '指南',
+        link: '/standard/',
       },
       { text: '代码管理', link: '/code/' },
+      { text: '统一格式', link: '/format/' },
     ],
     sidebar: {
       '/standard/': [
@@ -54,7 +52,9 @@ module.exports = {
         'commit',
       ],
       '/format/': [
-        '',
+        ['', '介绍'],
+        'prettier',
+        'eslint'
       ],
     }
   }
