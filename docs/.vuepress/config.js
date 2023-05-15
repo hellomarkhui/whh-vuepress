@@ -54,7 +54,8 @@ module.exports = {
       '/format/': [
         ['', '介绍'],
         'prettier',
-        'eslint'
+        'eslint',
+        'problems',
       ],
     }
   }

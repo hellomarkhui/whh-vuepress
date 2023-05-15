@@ -8,4 +8,4 @@
 本栏主要内容：
 
 - [prettier配置](./prettier.md)
-- [eslint配置](./prettier.md)
+- [eslint配置](./eslint.md)
