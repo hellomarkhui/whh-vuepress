@@ -1,4 +1,8 @@
 module.exports = {
+  plugins: [
+    ['@vuepress/back-to-top'],
+    ['vuepress-plugin-code-copy', true]
+  ],
   title: '前端开发',
   description: '前端开发积累，前端开发规范，代码管理。',
   host: "localhost",
